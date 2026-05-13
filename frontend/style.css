@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  color: white;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* Gradient backgrounds */
+.gradient-bg {
+  background: linear-gradient(-45deg, #ff6f61, #ffcc00, #4caf50, #03a9f4);
+  background-size: 400% 400%;
+  animation: gradientMove 10s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+/* Colored pages */
+.bg-orange { background: linear-gradient(135deg, #ff9800, #ff5722); }
+.bg-green { background: linear-gradient(135deg, #4caf50, #2e7d32); }
+.bg-blue { background: linear-gradient(135deg, #03a9f4, #0288d1); }
+.bg-yellow { background: linear-gradient(135deg, #ffeb3b, #fbc02d); color: black; }
+.bg-purple { background: linear-gradient(135deg, #9c27b0, #673ab7); }
+
+/* Animation */
+.fade-in { animation: fade 1s ease; }
+@keyframes fade { from {opacity: 0;} to {opacity: 1;} }
+
+.container {
+  margin: 60px auto;
+  padding: 30px;
+  background: rgba(0,0,0,0.6);
+  border-radius: 20px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 0 20px rgba(255,255,255,0.3);
+}
+
+h1, h2 {
+  text-shadow: 0 0 10px yellow;
+  margin-bottom: 20px;
+}
+
+.hero-img, .icon {
+  width: 120px;
+  margin: 10px auto;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Glow buttons */
+.glow-btn {
+  display: block;
+  text-decoration: none;
+  background-color: #000;
+  color: white;
+  border: 2px solid yellow;
+  border-radius: 8px;
+  margin: 8px;
+  padding: 10px 20px;
+  width: 220px;
+  font-weight: 600;
+  transition: all 0.3s;
+  box-shadow: 0 0 10px yellow;
+}
+
+.glow-btn:hover {
+  background: yellow;
+  color: black;
+  transform: scale(1.05);
+  box-shadow: 0 0 20px white;
+}
+
+/* Inputs & table */
+input {
+  padding: 8px;
+  border-radius: 6px;
+  border: none;
+  margin: 5px;
+  width: 200px;
+  text-align: center;
+}
+
+table {
+  width: 90%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  background: white;
+  color: black;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+th, td {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+th {
+  background-color: #333;
+  color: white;
+}
